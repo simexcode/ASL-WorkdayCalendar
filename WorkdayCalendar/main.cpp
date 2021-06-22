@@ -14,8 +14,8 @@
 *	production code, they are only meant to help anyone evaluating this project to follow my thought process
 *	and/or any ideas I have around the code.
 *
-*	The unitTest project will only link/build when running with visual studio in debug-x86
-*   no cmake/premake or other configurations are setup.
+*	The unitTest project will only link/build when running with visual studio
+*   no cmake/premake are setup.
 */
 #include <iostream>
 #include "WorkdayCalendar.h"
@@ -26,7 +26,6 @@ using namespace date;
 int main() {
     asl::WorkdayCalendar calendar;
 
-	//workday is from 08:00 -> 16:00
 	calendar.SetWorkdayStartAndStop(8h + 0min, 16h + 0min);
 	calendar.SetRecurringHoliday(17_d / May);
 	calendar.SetHoliday(27_d / May / 2004);
